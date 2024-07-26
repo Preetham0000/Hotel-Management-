@@ -1,0 +1,154 @@
+body {
+    
+    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    background-image: url("https://cf.bstatic.com/static/img/theme-index/bg_luxury/869918c9da63b2c5685fce05965700da5b0e6617.jpg"),url("https://img.freepik.com/premium-photo/generic-concept-luxury-hotel-room-hotel-close-tourist-attraction-modern-city_451699-234.jpg"),url("https://misstourist.com/wp-content/uploads/2023/05/Hotels-with-jacuzzi-in-room-Orange-County.jpg");
+    background-position:left top,center top,right top;   
+    background-repeat:no-repeat,no-repeat,no-repeat;
+
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 228, 138, 0.288);
+    z-index: -1;
+}
+
+header {
+    background: #3b2d1e;
+    color: #ffffff;
+    padding: 0px;
+    font-style: serif;
+    font-size: 20px;
+}
+.vertical-line {
+    border-left: 1px solid black;
+    height: 300px;
+}
+h1 {
+    font-family: Gilda Display;
+    margin: 0;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.hotel-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.date-input {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.date-input input {
+    margin: 0 10px;
+    padding:10x;
+    width: 200px;
+    font-size: px;
+    
+}
+
+section {
+    padding: 40px;
+}
+
+#banner {
+    background-image: url(bg1.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 200px 0;
+    color: #daa520;
+    
+}
+.green-text {
+    color: green;
+}
+
+#about {
+    background: #f5f5f5;
+}
+
+#rooms {
+    background: #fff;
+}
+
+.room {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.room img {
+    width: 100%;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    color: #daa520;
+}
+
+.btn {
+    display: inline-block;
+    background: #daa520;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.btn1 {
+    display: inline-block;
+    background: #daa520;
+   border-color: #daa520;
+    color: #fff;
+   /* padding: 15px;*/
+    text-decoration: none;
+    margin-top: 10px;
+    background: none;
+    border: 2px solid #daa520;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

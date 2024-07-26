@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Website</title>
+    <link rel="stylesheet" type="text/css" href="rand2.css">
+</head>
+
+<body>
+    
+    
+    <header>
+        <img src="hw1.jpg" alt="HOTEL WONDERS" height= "60" class="hotel-icon">
+        <center><h1>Welcome to Hotel Wonders</h1></center>
+        <nav>
+            <ul>
+                <li><a href="#about"><u>ABOUT</u></a></li>
+                <li><a href="#rooms"><u>ROOMS</u></a></li>
+                <li><a href="#contact"><u>CONTACT</u></a></li>
+                
+            </ul><hr>
+        </nav>
+        <center>
+        <label for="check-in">Check-in:</label>
+            <input type="date" id="check-in" name="check-in">
+            
+        <label for="check-out">Check-out:</label>
+            <input type="date" id="check-out" name="check-out">
+            <a href="#rooms" class="btn1">Check Rooms and Rates</a>
+            <!--<a href="#rooms" class="btn1">Rooms and Guests</a>-->
+            </center><hr>
+            </header>
+    <section id="banner">
+        <h2 style="color:rgb(255, 255, 255);">Discover your perfect getaway</h2>
+        <a href="#rooms" class="btn">View Rooms</a>
+        
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Hotel Wonders a luxurious hotel located in a serene and picturesque setting. Whether you're here for a relaxing vacation or a business trip, we provide top-notch amenities and exceptional service to ensure your stay is unforgettable.</p>
+    </section>
+    <section id="rooms">
+        <h2>Rooms & Suites</h2>
+    
+        <div id="dynamic-content"></div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries and reservations, please contact our friendly staff:</p>
+        <ul>
+            <li><strong>Phone:</strong> +1 123-456-7890</li>
+            <li><strong>Email:</strong> info@hotelWonders.com</li>
+            <li><strong>Address:</strong> 123 Wonders Street, Bangalore, Karnataka, India</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Hotel Wonders. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript
+function checkAvailability() {
+    const checkInDate = document.getElementById('check-in').value;
+    const checkOutDate = document.getElementById('check-out').value;
+
+    // Perform actions based on the selected dates (e.g., fetch available rooms, calculate rates, etc.)
+    // You can make API calls or perform other operations here.
+}
+//2 JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    for (const link of navLinks) {
+        link.addEventListener('click', smoothScroll);
+    }
+});
+
+function smoothScroll(event) {
+   // event.preventDefault();
+    const targetId = event.target.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    window.scrollTo({
+        top: targetElement.offsetTop - 100, // Adjust the offset based on your header height
+        behavior: 'smooth',
+    });
+}
+
+// JavaScript
+const bookNowButtons = document.querySelectorAll('.btn');
+
+for (const button of bookNowButtons) {
+    button.addEventListener('click', handleBooking);
+}
+
+function handleBooking(event) {
+//    event.preventDefault();
+
+    // Perform actions when the "Book Now" button is clicked (e.g., show a booking form, navigate to a booking page).
+    // You can also use JavaScript to make API calls to handle the booking process.
+}
+// JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+            // Simulate getting room data from the server (replace with actual API calls)
+            const roomData = [
+                {
+                    name: 'Single Room',
+                    description: 'Spacious and elegantly furnished room with a comfortable king-sized bed.',
+                    price: 2500,
+                    imageUrl: 'https://www.hotelmonterey.co.jp/upload_file/monhtyo/stay/sng_600_001.jpg' // Replace with the actual image URL
+                },
+                {
+                    name: 'Deluxe Room',
+                    description: 'Premium accommodation to provide guests with a heightened level of comfort and luxury.',
+                    price: 4000,
+                    imageUrl: 'https://d2ile4x3f22snf.cloudfront.net/wp-content/uploads/sites/177/2017/09/29111602/Premier_Grand_Deluxe.1-1400x700.jpg' // Replace with the actual image URL
+                },
+                {
+                    name: 'Executive Suite',
+                    description: 'Luxurious suite with a separate living area, bedroom, and stunning views.',
+                    price: 5499,
+                    imageUrl: 'https://d2ile4x3f22snf.cloudfront.net/wp-content/uploads/sites/210/2017/11/27032018/tentrem-hotel-yogyakarta-home-image271.jpg' // Replace with the actual image URL
+                },
+                {
+                    name: 'Presidential Suite',
+                    description: 'Most exclusive suite with a living area, kitchen, bedroom and lounge access.',
+                    price: 6800,
+                    imageUrl: 'https://skift.com/2013/09/21/the-10-most-expensive-hotel-suites-in-new-york-city/new-york-suite-the-presidential-suite-living-room/' // Replace with the actual image URL
+                },
+                // Add more rooms here with their respective image URLs
+            ];
+
+            // Populate the dynamic content with room data
+            const dynamicContent = document.getElementById('dynamic-content');
+
+            for (const room of roomData) {
+                const roomElement = document.createElement('div');
+                roomElement.className = 'room';
+                roomElement.innerHTML = `
+                    <img src="${room.imageUrl}" alt="${room.name}">
+                    <h3>${room.name}</h3>
+                    <p>${room.description}</p>
+                    <span class="price">Rs. ${room.price} per night</span>
+                    <a href="http://localhost/HOTEL BOOKING/trying.php" class="btn">Book Now</a>
+                `;
+
+                dynamicContent.appendChild(roomElement);
+            }
+        });
+
+    </script>
+</body>
+</html>
